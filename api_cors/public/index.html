@@ -1,0 +1,35 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-12 00:27:01
+ * @LastEditTime: 2021-11-16 21:33:37
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /node/public/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./test.jpg">
+    <div id="box"></div>
+    <script>
+        var http= new XMLHttpRequest();
+        http.onreadystatechange= function(){
+            console.log(http)
+            if(http.status == 200 && http.readyState == 4){
+                var msg= http.responseText;
+                var box= document.getElementById('box');
+                box.innerHTML= JSON.parse(msg).name;
+            }
+        }
+        //发送请求
+        http.open('GET', 'http://localhost:3001/game/login');
+        http.send();
+    </script>
+</body>
+</html>
