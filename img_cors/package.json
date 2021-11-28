@@ -5,14 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "start2": "node server2.js"
-
+    "start": "supervisor server.js & supervisor static.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "mime": "^3.0.0"
+  },
+  "devDependencies": {
+    "supervisor": "^0.12.0"
   }
 }

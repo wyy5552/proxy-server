@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-11-12 01:03:56
- * @LastEditTime: 2021-11-12 02:38:19
+ * @LastEditTime: 2021-11-24 22:43:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /node/public/index2.html
@@ -14,6 +14,7 @@
   </head>
 
   <body onload="main()">
+    哈哈哈
     <canvas id="webgl" width="400" height="400">
     Please use a browser that supports "canvas"
     </canvas>
@@ -227,7 +228,7 @@ function initTextures(gl, n) {
   // Register the event handler to be called on loading an image
   image.onload = function(){ loadTexture(gl, n, texture, u_Sampler, image); };
   // Tell the browser to load an image
-  image.src = 'http://127.0.0.1:80/sky.jpg';
+  image.src = 'http://dema.com:80/sky.jpg';
 
   return true;
 }

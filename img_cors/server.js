@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-11-12 00:25:37
- * @LastEditTime: 2021-11-12 22:46:51
+ * @LastEditTime: 2021-11-24 22:20:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /node/server.js
@@ -28,7 +28,7 @@ var server = http.createServer(function(req, res) {
               readStaticFile(res, path.join(__dirname,'./public/index.html'));
               break;
               default:{
-                res.setHeader("Access-Control-Allow-Origin","http://127.0.0.1:333");
+                // res.setHeader("Access-Control-Allow-Origin","http://localhost:3001");
                 // res.setHeader('Access-Control-Allow-Credentials',true);
                 readStaticFile(res,path.join(__dirname,'./public/',urlPathname))
               }
